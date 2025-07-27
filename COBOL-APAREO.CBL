@@ -8,6 +8,7 @@
  000600       *  OBJETIVO: TP - PRÁCTICA APAREO                        *        
  000700       *                                                        *        
  000900       **********************************************************        
+  =COLS> ----+----1----+----2----+----3----+----4----+----5----+----6----+----7--
  001000        ENVIRONMENT DIVISION.                                            
  001100        INPUT-OUTPUT SECTION.                                            
  001200        FILE-CONTROL.                                                    
@@ -15,6 +16,7 @@
  001400              SELECT MOVIM-FILE ASSIGN TO DDMOV.                         
  001500              SELECT CLIENTE-UPD ASSIGN TO DDCLIUPD.                     
  002100                                                                         
+  =COLS> ----+----1----+----2----+----3----+----4----+----5----+----6----+----7--
  002200        DATA DIVISION.                                                   
  002300        FILE SECTION.                                                    
  002400        FD CLIENTE-FILE.                                                 
@@ -60,6 +62,8 @@
  026105           03 WS-TRAB-CUENTA         PIC 9(08).                          
  026106           03 WS-TRAB-SALDO          PIC S9(09)V99.                      
  026107                                                                         
+ =COLS> ----+----1----+----2----+----3----+----4----+----5----+----6----+----7--
+              *A    B
  026108        PROCEDURE DIVISION.                                              
  026109                                                                         
  026110                                                                         
@@ -110,6 +114,7 @@
  026155                     MOVE WS-MOV-TIPO   TO WS-TIPO-MOV-MOV               
  026156                     MOVE WS-MOV-CUENTA TO WS-NUM-MOV-MOV                
  026157            END-READ.                                                    
+ =COLS> ----+----1----+----2----+----3----+----4----+----5----+----6----+----7--
  026158                                                                         
  026159        PROCESO-APAREO.                                                  
  026160            EVALUATE TRUE                                                
@@ -152,6 +157,7 @@
  026197            ADD 1 TO WS-MOV-SIN-CLIENTE.                                 
  026198            PERFORM LEER-MOVIMIENTO.                                     
  026199                                                                         
+ =COLS> ----+----1----+----2----+----3----+----4----+----5----+----6----+----7--
  026200        MOSTRAR-ESTADISTICAS.                                            
  026210            DISPLAY "***********************".                           
  026300            DISPLAY "REGISTRO CLIENTE LEIDOS: " WS-REG-CLI-LEIDOS.       
